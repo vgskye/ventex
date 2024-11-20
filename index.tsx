@@ -47,7 +47,7 @@ export default definePlugin({
             find: "codeBlock:{react(",
             replacement: {
                 match: /codeBlock:\{react\((\i),(\i),(\i)\)\{/,
-                replace: "$&if($1.lang == 'latex') return $self.createBlock($1,$2,$3);"
+                replace: "$&if($1.lang == 'latex' || $1.lang == 'tex') return $self.createBlock($1,$2,$3);"
             }
         },
         {
