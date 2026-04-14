@@ -54,7 +54,7 @@ export default definePlugin({
             find: "inlineCode:{react:(",
             replacement: {
                 match: /inlineCode:\{react:\((\i),(\i),(\i)\)=>/,
-                replace: "$&($1.content.startsWith('$$') && $1.content.endsWith('$$'))?$self.createInline($1,$2,$3):"
+                replace: "$&((typeof $1.content) === 'string' && $1.content.startsWith('$$') && $1.content.endsWith('$$'))?$self.createInline($1,$2,$3):"
             }
         }
     ],
