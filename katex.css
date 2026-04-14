@@ -1,4 +1,4 @@
-@import url("https://unpkg.com/katex@0.16.9/dist/katex.min.css");
+@import url("https://unpkg.com/katex@0.16.45/dist/katex.min.css");
 
 .katex-display {
     width: min-content;

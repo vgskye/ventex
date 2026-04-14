@@ -6,7 +6,7 @@ import { makeLazy } from "@utils/lazy";
 import { React, useEffect, useMemo, useState } from "@webpack/common";
 
 // @ts-expect-error
-export const getKatex = /* #__PURE__*/ makeLazy(async () => (await import("https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.mjs")).default);
+export const getKatex = /* #__PURE__*/ makeLazy(async () => (await import("https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.mjs")).default);
 
 export function useKatex() {
     const [katex, setKatex] = useState();
@@ -18,7 +18,7 @@ export function useKatex() {
 }
 
 // @ts-expect-error
-export const getDomPurify = /* #__PURE__*/ makeLazy(async () => (await import("https://cdn.jsdelivr.net/npm/dompurify@3.1.7/dist/purify.es.mjs")).default);
+export const getDomPurify = /* #__PURE__*/ makeLazy(async () => (await import("https://cdn.jsdelivr.net/npm/dompurify@3.4.0/dist/purify.es.mjs")).default);
 
 export function useDomPurify() {
     const [domPurify, setDomPurify] = useState();
